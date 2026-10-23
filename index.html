@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#0c0d10">
+  <meta name="color-scheme" content="dark">
+  <title>Al-Rūḥāniyya: Arabic Astral Magic, Kitāb al-Bulhān, Picatrix & Al-Bīrūnī's Parts</title>
+  <style>
+    :root {
+      --obsidian:#0c0d10; --surface:#12151b; --surface-2:#171b23; --gold:#d4af37;
+      --gold-soft:#a88a2f; --lapis:#1e293b; --parchment:#e2e8f0; --muted:#94a3b8;
+      --danger:#ef4444; --success:#4ade80; --radius:16px; --shadow:0 12px 35px rgba(0,0,0,.34);
+      --sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      --serif:ui-serif,Georgia,Cambria,"Times New Roman",serif;
+    }
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html,body{height:100%;margin:0;background:var(--obsidian);color:var(--parchment);font-family:var(--sans)}
+    body{overscroll-behavior:none}
+    button,input,select,textarea{font:inherit}
+    button{color:inherit}
+    .app{height:100dvh;display:flex;flex-direction:column;overflow:hidden;background:radial-gradient(circle at 80% -10%,rgba(212,175,55,.09),transparent 34%),var(--obsidian)}
+    .app-header{flex:none;padding:calc(env(safe-area-inset-top) + 12px) 16px 12px;border-bottom:1px solid var(--lapis);background:rgba(12,13,16,.96);z-index:5}
+    .eyebrow{margin:0 0 3px;color:var(--gold);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+.subtitle{margin:3px 0 0;color:var(--muted);font-size:.82rem;letter-spacing:.02em}
+    h1{font-family:var(--serif);font-size:clamp(1.12rem,4.8vw,1.45rem);line-height:1.15;margin:0;font-weight:700}
+    .view{flex:1;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;overscroll-behavior-y:contain;padding:16px 16px 28px}
+    .panel{display:none;max-width:880px;margin:0 auto;animation:fade.18s ease}
+    .panel.active{display:block}
+    @keyframes fade{from{opacity:.5;transform:translateY(3px)}to{opacity:1;transform:none}}
+    .section-head{margin-bottom:14px}.section-head h2{font-family:var(--serif);font-size:1.32rem;margin:0 0 6px}.section-head p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.45}
+    .card{background:linear-gradient(145deg,rgba(23,27,35,.98),rgba(18,21,27,.98));border:1px solid var(--lapis);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;margin:0 0 14px}
+    .subcard{background:#0f1218;border:1px solid var(--lapis);border-radius:12px;padding:13px;margin-top:12px}
+    .chips{display:flex;gap:8px;overflow-x:auto;padding:2px 1px 10px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+    .chip{flex:none;min-height:44px;border:1px solid var(--lapis);background:var(--surface);border-radius:999px;padding:9px 14px;cursor:pointer}
+    .chip.active{border-color:var(--gold);color:#fff4bd;background:rgba(212,175,55,.13)}
+    .king-hero{display:grid;grid-template-columns:74px 1fr;gap:14px;align-items:center}.planet-orb{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;font-size:2.15rem;border:1px solid var(--gold-soft);background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.18),var(--orb,#3d4655) 55%,#08090c);box-shadow:0 0 24px color-mix(in srgb,var(--orb,#d4af37) 30%,transparent)}
+    .arabic{font-family:var(--serif);font-size:1.55rem;direction:rtl;margin:0;color:#fff4bd}.title-line{font-family:var(--serif);font-size:1.13rem;margin:2px 0}.translation{color:var(--muted);font-size:.88rem;margin:0}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:14px 0}.fact{background:#0f1218;border:1px solid var(--lapis);border-radius:11px;padding:10px}.fact span{display:block;color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}.fact strong{font-size:.9rem}
+    h3{font-family:var(--serif);font-size:1.02rem;color:#f6e6a8;margin:15px 0 7px}.body-copy{color:#cbd5e1;line-height:1.55;font-size:.92rem;margin:0}.note{border-left:3px solid var(--gold-soft);padding:10px 12px;background:rgba(212,175,55,.07);color:#cbd5e1;border-radius:0 10px 10px 0;font-size:.82rem;line-height:1.45;margin:12px 0}.warning{border-left-color:#f59e0b}.danger-note{border-left-color:var(--danger)}
+    .form-grid{display:grid;grid-template-columns:1fr;gap:12px}.field label,.field.label{display:block;color:#cbd5e1;font-size:.82rem;margin:0 0 6px}.field small{display:block;color:var(--muted);font-size:.72rem;margin-top:5px}
+    input,select,textarea{width:100%;min-height:46px;background:#0d1015;border:1px solid #334155;border-radius:11px;color:var(--parchment);padding:11px 12px;outline:none}
+    input:focus,select:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,175,55,.12)}textarea{resize:vertical;min-height:105px}
+    .degree-row{display:grid;grid-template-columns:1.1fr.9fr;gap:8px}.segmented{display:grid;grid-template-columns:1fr 1fr;background:#0d1015;border:1px solid #334155;border-radius:12px;padding:3px}.segmented button{min-height:42px;border:0;background:transparent;border-radius:9px;cursor:pointer}.segmented button.active{background:rgba(212,175,55,.18);color:#fff1ae;box-shadow:inset 0 0 0 1px var(--gold-soft)}
+    details{border:1px solid var(--lapis);border-radius:12px;padding:0 12px;background:#0f1218}summary{min-height:48px;display:flex;align-items:center;cursor:pointer;color:#f6e6a8;font-weight:650}details[open] summary{border-bottom:1px solid var(--lapis);margin-bottom:12px}
+    .actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}.btn{min-height:46px;border-radius:11px;border:1px solid var(--gold-soft);background:rgba(212,175,55,.13);padding:10px 15px;font-weight:700;cursor:pointer}.btn.primary{background:var(--gold);color:#16130a;border-color:var(--gold)}.btn.secondary{border-color:#475569;background:#11151c}.btn.danger{border-color:#7f1d1d;background:rgba(127,29,29,.2);color:#fecaca}.btn:active{transform:translateY(1px)}.btn:disabled{opacity:.45;cursor:not-allowed}
+    .results{display:grid;gap:10px;margin-top:14px}.result{border:1px solid var(--lapis);border-radius:13px;background:#0f1218;padding:13px}.result-top{display:flex;justify-content:space-between;align-items:start;gap:10px}.result h3{margin:0;color:var(--parchment)}.degree{font-family:var(--serif);font-size:1.05rem;color:#ffe894;white-space:nowrap}.formula{font-size:.72rem;color:var(--muted);margin:5px 0 8px}.tag{display:inline-flex;align-items:center;min-height:28px;border:1px solid #475569;border-radius:999px;padding:3px 9px;font-size:.7rem;color:#cbd5e1}
+    .filter-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}.recipe h3{font-size:1.13rem;margin:0 0 7px}.recipe-meta{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:8px}.steps{padding-left:20px;margin:8px 0 0}.steps li{margin:0 0 8px;line-height:1.45;color:#cbd5e1;font-size:.88rem}.decan-strip{display:flex;gap:7px;overflow-x:auto;padding:4px 0 2px;scrollbar-width:none}.decan-pill{flex:none;border:1px solid var(--lapis);border-radius:9px;padding:7px 9px;font-size:.72rem;background:#0d1015;color:#cbd5e1}
+    .history-toolbar{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:18px 0 10px}.history-toolbar h3{margin:0}.count{color:var(--muted);font-size:.8rem}.empty{text-align:center;color:var(--muted);padding:24px 12px}.log-entry{position:relative}.log-entry h3{margin:0 42px 5px 0;color:var(--parchment)}.log-meta{font-size:.76rem;color:var(--muted);margin-bottom:9px}.status{display:inline-block;border-radius:999px;padding:3px 8px;font-size:.7rem;border:1px solid #475569}.status.complete{border-color:#166534;color:#bbf7d0;background:rgba(22,101,52,.15)}.delete-log{position:absolute;right:10px;top:10px;width:44px;height:44px;border:0;border-radius:10px;background:transparent;color:#fca5a5;font-size:1.2rem;cursor:pointer}
+    .toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom));transform:translate(-50%,14px);max-width:calc(100% - 32px);background:#f1e4ad;color:#17140a;border-radius:10px;padding:10px 14px;font-size:.85rem;font-weight:650;opacity:0;pointer-events:none;transition:.2s;z-index:20;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translate(-50%,0)}
+    .tabbar{flex:none;display:grid;grid-template-columns:repeat(4,1fr);min-height:64px;padding:5px 6px calc(5px + env(safe-area-inset-bottom));background:rgba(12,13,16,.98);border-top:1px solid var(--lapis);z-index:10}
+    .tab{min-width:44px;min-height:52px;border:0;border-radius:10px;background:transparent;color:var(--muted);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer}.tab.icon{font-size:1.18rem;line-height:1}.tab.label{font-size:.65rem}.tab.active{color:#ffe68a;background:rgba(212,175,55,.1)}
+    .sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(min-width:620px){.view{padding:24px 24px 36px}.form-grid.two{grid-template-columns:1fr 1fr}.facts{grid-template-columns:repeat(4,1fr)}.filter-grid{grid-template-columns:1fr 1fr}.app-header{padding-left:24px;padding-right:24px}.tabbar{padding-left:max(16px,calc((100% - 760px)/2));padding-right:max(16px,calc((100% - 760px)/2))}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+<div class="app" id="app">
+  <header class="app-header">
+    <p class="eyebrow">Offline field companion</p>
+    <h1>Al-Rūḥāniyya</h1>
+    <p class="subtitle">Arabic Astral Magic, Kitāb al-Bulhān, Picatrix &amp; Al-Bīrūnī's Parts</p>
+  </header>
+
+  <main class="view" id="mainView">
+    <section class="panel active" id="panel-kings" role="tabpanel" aria-labelledby="tab-kings">
+      <div class="section-head"><h2>The Seven Day Kings</h2><p>Planetary-day profiles associated with the illustrated tradition of <i>Kitāb al-Bulhān</i> and later copies.</p></div>
+      <div class="chips" id="kingPicker" aria-label="Choose a planetary day"></div>
+      <article class="card" id="kingProfile"></article>
+      <p class="note warning"><strong>Source boundary:</strong> the Sunday and Monday folios are missing from MS. Marsh 144 and are known through later Ottoman witnesses. Directions, stones, incense blends, and the short carrier addresses below are clearly labeled correspondential reconstructions, not manuscript quotations.</p>
+    </section>
+
+    <section class="panel" id="panel-lots" role="tabpanel" aria-labelledby="tab-lots" hidden>
+      <div class="section-head"><h2>Al-Bīrūnī’s Lots</h2><p>Enter ecliptic longitudes as 0–359.999° or choose a zodiac sign and degree.</p></div>
+      <div class="card">
+        <div class="form-grid two" id="coreInputs"></div>
+        <div class="field" style="margin-top:12px"><span class="label">Chart sect</span><div class="segmented" role="group" aria-label="Chart type"><button type="button" id="sectDay" class="active" data-sect="day">☀ Day</button><button type="button" id="sectNight" data-sect="night">☾ Night</button></div></div>
+        <details style="margin-top:12px" open><summary>Required significators</summary><div class="form-grid two" id="advancedInputs"></div><p class="note">These extra longitudes are necessary for the historical formulas: Mars for Bravery, Mercury and Venus for Treasure Trove, Saturn for Necessity, and the ascendant ruler for Boldness. This calculator does not silently invent them.</p></details>
+        <div class="actions"><button class="btn primary" id="calculateLots" type="button">Calculate lots</button><button class="btn secondary" id="resetLots" type="button">Reset</button></div>
+        <div id="lotError" class="note danger-note" role="alert" hidden></div>
+      </div>
+      <div class="results" id="lotResults" aria-live="polite"></div>
+      <p class="note"><strong>Method:</strong> each lot is reduced modulo 360°. Historical lists and translations vary; the exact operative formula is printed beside every result.</p>
+    </section>
+
+    <section class="panel" id="panel-recipes" role="tabpanel" aria-labelledby="tab-recipes" hidden>
+      <div class="section-head"><h2>Picatrix Recipes</h2><p>A searchable, safety-adapted study catalog of planetary and decanate image operations.</p></div>
+      <div class="filter-grid">
+        <div class="field"><label for="intentionFilter">Intention</label><select id="intentionFilter"><option value="all">All intentions</option><option>Wealth/Favor</option><option>Protection/Defense</option><option>Love/Concord</option><option>Victory/Power</option></select></div>
+        <div class="field"><label for="recipeSearch">Search</label><input id="recipeSearch" type="search" placeholder="Planet, material…" autocomplete="off"></div>
+      </div>
+      <div id="recipeList"></div>
+      <p class="note warning"><strong>Material safety:</strong> historical texts mention toxic metals, irritating smoke, and animal substances. This edition specifies inert display substitutes and ventilation. Never heat metals, ingest preparations, burn unknown substances, or leave flame unattended.</p>
+    </section>
+
+    <section class="panel" id="panel-ledger" role="tabpanel" aria-labelledby="tab-ledger" hidden>
+      <div class="section-head"><h2>Operative Ledger</h2><p>Entries stay on this device in local storage. No account, network, or cloud sync is used.</p></div>
+      <form class="card" id="ledgerForm">
+        <div class="form-grid two">
+          <div class="field"><label for="operationName">Operation name</label><input id="operationName" maxlength="80" required placeholder="e.g., Jovian favor study"></div>
+          <div class="field"><label for="ledgerKing">King / planet</label><select id="ledgerKing"></select></div>
+          <div class="field"><label for="ledgerTarget">Target lot / intention</label><input id="ledgerTarget" maxlength="100" placeholder="Fortune, protection…"></div>
+          <div class="field"><label for="ledgerStatus">Consecration status</label><select id="ledgerStatus"><option>Planned</option><option>Prepared</option><option>Consecrated</option><option>Complete</option><option>Abandoned</option></select></div>
+        </div>
+        <div class="field" style="margin-top:12px"><label for="electionNotes">Election notes</label><textarea id="electionNotes" maxlength="2000" placeholder="Date, planetary hour, aspects, materials, observations…"></textarea></div>
+        <div class="actions"><button class="btn primary" type="submit">Save entry</button><button class="btn secondary" type="button" id="exportLogs">Export TXT</button><button class="btn danger" type="button" id="clearLogs">Clear logs</button></div>
+      </form>
+      <div class="history-toolbar"><h3>History</h3><span class="count" id="logCount">0 entries</span></div>
+      <div id="logHistory"></div>
+    </section>
+  </main>
+
+  <nav class="tabbar" aria-label="Primary navigation">
+    <button class="tab active" id="tab-kings" data-tab="kings" role="tab" aria-selected="true" aria-controls="panel-kings"><span class="icon">☉</span><span class="label">Kings</span></button>
+    <button class="tab" id="tab-lots" data-tab="lots" role="tab" aria-selected="false" aria-controls="panel-lots"><span class="icon">⟐</span><span class="label">Lots</span></button>
+    <button class="tab" id="tab-recipes" data-tab="recipes" role="tab" aria-selected="false" aria-controls="panel-recipes"><span class="icon">◇</span><span class="label">Picatrix</span></button>
+    <button class="tab" id="tab-ledger" data-tab="ledger" role="tab" aria-selected="false" aria-controls="panel-ledger"><span class="icon">▤</span><span class="label">Ledger</span></button>
+  </nav>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+
+<script>
+'use strict';
+
+const DAY_KINGS = [
+  {id:'sun',day:'Sunday',planet:'Sun',glyph:'☉',arabic:'المُذَهَّب',name:'Al-Mudhib',translation:'The Gilder / Golden One',orb:'#d4af37',metal:'Gold',stone:'Rock crystal or yellow sapphire',color:'Gold and saffron',direction:'East · sunrise station',sourceClass:'Marsh 144 lacuna; later Ottoman witness',form:'A richly dressed golden sovereign with a radiant or flaming halo, enveloped at the shoulders by luminous cloud-like forms.',incense:'Saffron, mastic, and aloeswood; use a minute amount on an electric warmer or an unscented LED-light substitute.',address:'O Golden Regent of the solar day, bearer of clarity and noble purpose: carry this petition only toward illumination and right order.',addressType:'Modern non-coercive carrier key; not a manuscript quotation.'},
+  {id:'moon',day:'Monday',planet:'Moon',glyph:'☾',arabic:'مُرَّة الأَبْيَض',name:'Murrah al-Abyad',translation:'Murrah the White / White King',orb:'#cbd5e1',metal:'Silver',stone:'Pearl or moonstone',color:'White and pale silver',direction:'West · moonset station',sourceClass:'Marsh 144 lacuna; later Ottoman witness',form:'A pale, horned, hybrid sovereign with golden eyes, hanging ears, fangs, and layered cheeks; later copies emphasize white garments and silver tones.',incense:'White sandalwood and a trace of camphor; do not burn camphor indoors, use a cool aromatic sachet instead.',address:'O White Regent of the lunar day, keeper of reflection and measured change: carry this petition toward clear dreams and safe passage.',addressType:'Modern non-coercive carrier key; not a manuscript quotation.'},
+  {id:'mars',day:'Tuesday',planet:'Mars',glyph:'♂',arabic:'الأَحْمَر',name:'Al-Ahmar',translation:'The Red One',orb:'#9f2d2d',metal:'Iron (display only)',stone:'Red jasper',color:'Red and rust',direction:'South · heat station',sourceClass:'Illustrated in the Bulhān tradition',form:'A red martial king riding a lion, armed with a sword and displaying a severed head: an image of conquest and danger rather than a devotional portrait.',incense:'Ginger and black pepper kept dry in a sealed sachet; avoid historical sulfurous fumigants.',address:'O Red Regent of the martial day, boundary of courage and restraint: carry this petition only for disciplined defense and just resolve.',addressType:'Modern non-coercive carrier key; not a manuscript quotation.'},
+  {id:'mercury',day:'Wednesday',planet:'Mercury',glyph:'☿',arabic:'بُرْقَان',name:'Burqan',translation:'The Two Thunderclaps / Gleaming One',orb:'#305a88',metal:'Mercury (symbolic only; use aluminum)',stone:'Agate',color:'Blue, mixed or variegated',direction:'North · wind station',sourceClass:'Illustrated in the Bulhān tradition',form:'A dark or blue-black enthroned king attended by lesser spirits, associated in later descriptions with teaching, writing, signs, and swift messages.',incense:'Mastic and aloeswood with a cool camphor association; use mastic alone on a low-temperature warmer.',address:'O Quick Regent of the mercurial day, interpreter of signs: carry this petition toward truthful speech, skill, and lucid understanding.',addressType:'Modern non-coercive carrier key; not a manuscript quotation.'},
+  {id:'jupiter',day:'Thursday',planet:'Jupiter',glyph:'♃',arabic:'شَمْهُورِش',name:'Shamhurish',translation:'Jovian King; “Father of the Newborn” in later lore',orb:'#6d4b8c',metal:'Tin',stone:'Lapis lazuli or sapphire',color:'Purple and royal blue',direction:'Northeast · expansion station',sourceClass:'Illustrated in MS. Marsh 144',form:'An aged, commanding king shown in audience with subordinate spirits, emphasizing judgment, hierarchy, counsel, and lawful authority.',incense:'Sandalwood, aloeswood, and frankincense; use a resin-free sandalwood chip or unlit aromatic wood.',address:'O Great Regent of the Jovian day, patron of counsel and equity: carry this petition toward lawful favor, generosity, and wise increase.',addressType:'Modern non-coercive carrier key; not a manuscript quotation.'},
+  {id:'venus',day:'Friday',planet:'Venus',glyph:'♀',arabic:'زَوْبَعَة',name:"Zoba'ah / Zawbaʿa",translation:'The Whirlwind',orb:'#317557',metal:'Copper',stone:'Emerald or green aventurine',color:'Green',direction:'Southeast · garden station',sourceClass:'Illustrated in MS. Marsh 144',form:'A powerful winged anthropomorphic jinn amid animated clouds and flame-like forms, with ornaments that signal rank and splendor.',incense:'Sandalwood and frankincense; historical ambergris and musk are omitted in favor of plant-based substitutes.',address:'O Verdant Regent of the Venusian day, harmonizer of hearts: carry this petition toward consent, friendship, beauty, and concord.',addressType:'Modern non-coercive carrier key; not a manuscript quotation.'},
+  {id:'saturn',day:'Saturday',planet:'Saturn',glyph:'♄',arabic:'مَيْمُون',name:'Maymun',translation:'The Fortunate / Prosperous One',orb:'#383b43',metal:'Lead (symbolic only; use graphite or clay)',stone:'Black onyx',color:'Black and deep indigo',direction:'Northwest · boundary station',sourceClass:'Illustrated in MS. Marsh 144',form:'A muscular winged jinn among lively clouds, with feathered wings, flames below, a pointed beard, tusks, goat-like ears, horns, and intense green eyes.',incense:'Myrrh, costus, mastic, and olive-oil associations; use sealed botanicals, never aerosolize unknown costus products.',address:'O Ancient Regent of the Saturnine day, keeper of limits and endurance: carry this petition toward patience, protection, and rightful closure.',addressType:'Modern non-coercive carrier key; not a manuscript quotation.'}
+];
+
+const PICATRIX_RECIPES = [
+  {id:'solar-favor',title:'Solar Image for Rank and Favor',intention:'Wealth/Favor',planet:'Sun',decan:'Leo I',condition:'Sun dignified and unafflicted; Leo rising or the Sun strong in the 10th; work in a solar hour with the Moon applying to a benefic.',material:'Gold was preferred historically; use brass, gilded paper, or golden polymer clay.',image:'A crowned king seated on a throne, a solar disk above, one hand raised in dignified command.',incense:'Saffron and frankincense association; use an electric warmer or leave the aromatics unburned.',steps:['Prepare the clean, inert plate before the elected hour.','At the election, orient the image upright and engrave or draw the crowned figure.','State the intended office, favor, or honorable outcome in one concise sentence.','Place the plate beside the unlit aromatics for one planetary hour.','Wrap in yellow cloth and store privately; record the election in the ledger.'],note:'Adapted as a non-coercive favor image; not a guarantee of worldly results.'},
+  {id:'jupiter-wealth',title:'Jovian Image for Increase',intention:'Wealth/Favor',planet:'Jupiter',decan:'Sagittarius II',condition:'Jupiter angular, direct, dignified or received by a benefic; Moon applying by trine or sextile; Jupiter hour.',material:'Tin plate, blue glass, or lapis-colored clay.',image:'A dignified scholar or judge seated with a book, beneath a four-pointed canopy.',incense:'Sandalwood and frankincense association; smoke-free aromatic wood is preferred.',steps:['Write a bounded aim focused on lawful income, teaching, patronage, or generosity.','During the election, inscribe the seated judge and a simple Jupiter glyph.','Read the aim once in a steady voice without commanding another person.','Rest the image on blue cloth with the aromatic wood nearby.','Close the working at the end of the hour and note measurable outcomes.'],note:'Uses Jovian themes common to astral-image literature.'},
+  {id:'mercury-skill',title:'Mercurial Image for Learning and Speech',intention:'Victory/Power',planet:'Mercury',decan:'Gemini I',condition:'Mercury direct, visible if possible, dignified or well received; rising or culminating; Mercury hour.',material:'Historically quicksilver correspondences appear; never use mercury. Substitute aluminum, paper, or agate.',image:'A scribe at a desk holding a reed pen, with a winged or winding line above the head.',incense:'Mastic and aloeswood association; use a dry sachet.',steps:['Define one skill, examination, negotiation, or writing objective.','Draw the scribe image and the objective’s first word on the reverse.','Read a short passage demonstrating the skill you seek to strengthen.','Keep the image with the relevant book or tools for seven days.','Review progress and archive the result in the ledger.'],note:'A safe study adaptation; no toxic mercury is used.'},
+  {id:'venus-concord',title:'Venusian Images for Concord',intention:'Love/Concord',planet:'Venus',decan:'Libra II',condition:'Venus dignified and unafflicted; Moon applying to Venus; lords of the 1st and 7th in a good applying aspect; Venus or Jupiter hour.',material:'Two copper-colored clay or paper figures; rose quartz is optional.',image:'Two fully clothed figures facing one another with open hands, joined by a single braided line.',incense:'Sandalwood, rose, and frankincense associations; use unscented flowers if fragrance-sensitive.',steps:['Use only for mutual, consenting reconciliation or friendship.','Create two figures without names if another person has not consented.','Place them face to face and join them loosely with green thread.','Speak a petition for honesty, consent, and mutual benefit.','Store together for one lunar month, then untie and reassess.'],note:'The historical paired-image pattern is retained, while coercive binding and burial are omitted.'},
+  {id:'mars-defense',title:'Martial Shield for Defensive Courage',intention:'Protection/Defense',planet:'Mars',decan:'Aries II',condition:'Mars dignified, not afflicting the Ascendant or Moon; a benefic aspects Mars; Mars hour.',material:'Iron is historical; use red jasper, steel kept cold, or red clay. Do not heat or forge indoors.',image:'A standing guardian behind a round shield, weapon lowered rather than raised.',incense:'Ginger and pepper association kept in a sealed sachet; sulfur is prohibited.',steps:['Name the boundary being defended, avoiding revenge or harm.','Engrave the lowered-weapon guardian during the elected hour.','Trace a circle around the image while stating the boundary.','Place the sealed spice sachet beside, not on, the image.','Carry only when needed; review whether ordinary safety measures are also in place.'],note:'Reframed from martial power toward proportionate defense.'},
+  {id:'saturn-boundary',title:'Saturnine Boundary Tablet',intention:'Protection/Defense',planet:'Saturn',decan:'Capricorn I',condition:'Saturn dignified or received, away from the Ascendant and Moon; Saturn hour; waning Moon if the aim is closure.',material:'Lead is historical and unsafe. Use slate, graphite, black paper, or dark clay.',image:'An old gatekeeper seated before a closed stone gate, holding a key downward.',incense:'Myrrh association; keep resin unburned or use a certified low-temperature warmer with ventilation.',steps:['Write what must end, remain contained, or be patiently maintained.','Draw the closed gate and downward key on the safe substitute.','Fold the written limit behind the tablet.','Sit silently for several minutes, then close the container.','Revisit after one Saturn cycle of seven days and document the result.'],note:'Never cut, sand, heat, or handle lead for this practice.'},
+  {id:'moon-travel',title:'Lunar Image for Safe Travel',intention:'Protection/Defense',planet:'Moon',decan:'Cancer I',condition:'Waxing Moon, unafflicted, applying to Jupiter or Venus; Moon in a movable or travel-supporting sign; lunar hour.',material:'Silver-colored paper, pearl shell substitute, or moonstone.',image:'A small boat beneath a crescent Moon, approaching a lit harbor.',incense:'White sandalwood association; no flame is needed.',steps:['Write the route and practical safety checks on the reverse.','Draw the boat and harbor during the lunar hour.','Confirm weather, communications, fuel, and emergency contacts.','Place the image with travel documents, not where it obstructs driving.','Record departure and safe return in the ledger.'],note:'The image supplements rather than replaces practical travel planning.'},
+  {id:'aries-victory',title:'First Aries Decan Image for Initiative',intention:'Victory/Power',planet:'Mars',decan:'Aries I',condition:'Ascendant in the first decan of Aries, its ruler Mars dignified, and the Moon free from affliction.',material:'Red clay, carnelian, or a cold steel token.',image:'A dark, alert figure standing upright with an axe held at rest, clothed in white and girded in red.',incense:'Dry ginger association; no combustion required.',steps:['Choose a concrete challenge requiring initiative rather than domination.','Form or draw the decan figure during the election.','Write the first lawful action beneath the image.','Complete that action before the planetary hour ends if feasible.','Store the token only while the project remains active.'],note:'Image wording is a concise synthesis of common decan descriptions; witnesses vary.'},
+  {id:'taurus-concord',title:'Second Taurus Decan Image for Cultivation',intention:'Love/Concord',planet:'Moon',decan:'Taurus II',condition:'Ascendant in Taurus II; Venus and Moon unafflicted; waxing Moon preferred for growth.',material:'Green clay, copper-colored card, or rose quartz.',image:'A cultivated field with a standing figure who holds a tool and an open hand.',incense:'Rose petals or sandalwood kept unburned.',steps:['Name the relationship, garden, or community practice to cultivate.','Draw the field and open-handed figure.','List one repeated act that supports growth and consent.','Keep the image near the relevant workspace.','Review after ten days, the span of one decan.'],note:'A constructive interpretation of Taurus cultivation symbolism.'},
+  {id:'leo-command',title:'Third Leo Decan Image for Steady Authority',intention:'Victory/Power',planet:'Mars',decan:'Leo III',condition:'Ascendant in Leo III; Sun strong and Mars well received; avoid an afflicted Moon.',material:'Brass, gold card, or yellow clay.',image:'A mature ruler holding a staff vertically, with a small lion seated peacefully nearby.',incense:'Saffron association; use a sealed sachet.',steps:['Define authority as responsibility, not control over others.','Make the ruler-and-lion image during the election.','State three duties attached to the desired authority.','Place the image above the written duties.','Review conduct weekly and retire the image if duties are neglected.'],note:'A safety-adapted authority image drawing on solar and martial themes.'},
+  {id:'libra-alliance',title:'First Libra Decan Image for Fair Alliance',intention:'Love/Concord',planet:'Moon',decan:'Libra I',condition:'Ascendant in Libra I; Venus dignified; Moon applying to Venus or Jupiter.',material:'Copper-colored card, balanced wooden disks, or green clay.',image:'Two people seated on equal-height chairs, a balanced scale between them.',incense:'Rose and sandalwood associations; smoke-free.',steps:['Write the shared aim and each party’s non-negotiable boundary.','Draw equal chairs and the balanced scale.','If all parties consent, read the shared aim together.','Place the written boundaries under the corresponding side.','Review and revise by agreement after ten days.'],note:'Designed for mutual agreements; not for compelling affection.'},
+  {id:'capricorn-fortify',title:'Second Capricorn Decan Image for Endurance',intention:'Protection/Defense',planet:'Venus',decan:'Capricorn II',condition:'Ascendant in Capricorn II; Saturn stable and Venus unafflicted; Moon not applying to a malefic.',material:'Dark clay, slate, or black onyx.',image:'A builder setting a square stone into a wall while a lamp burns safely behind.',incense:'Myrrh and sandalwood associations, unburned.',steps:['Identify one structure, financial, physical, or procedural, that needs reinforcement.','Make the builder-and-wall image.','Write the next maintenance task on the reverse.','Complete the task using ordinary safe methods.','Retain the image as a maintenance reminder and log each review.'],note:'Combines decanate endurance with practical risk reduction.'}
+];
+
+const ARABIC_PARTS = [
+  {id:'fortune',arabic:'سهم السعادة',name:'Part of Fortune',translit:'Sahm al-Saʿāda',ruler:'Moon',dayFormula:'Asc + Moon − Sun',nightFormula:'Asc + Sun − Moon',needs:['asc','sun','moon'],explanation:'A lunar lot projected from the sect light to the contrary light. It concerns bodily circumstances, material fortune, livelihood, and what befalls the native.',use:'Assess material conditions, changes of circumstance, and the ruler of the resulting sign.',calc:'fortune'},
+  {id:'spirit',arabic:'سهم الغيب',name:'Part of Spirit / Unseen',translit:'Sahm al-Ghayb',ruler:'Sun',dayFormula:'Asc + Sun − Moon',nightFormula:'Asc + Moon − Sun',needs:['asc','sun','moon'],explanation:'The complementary solar lot, commonly called Spirit or Daimon; “Unseen” is a supplied interpretive label. It concerns intention, action, vocation, and directed choice.',use:'Assess agency, purpose, reputation, and deliberate works through the lot and its ruler.',calc:'spirit'},
+  {id:'boldness',arabic:'سهم الجزامة',name:'Part of Boldness & War',translit:'Sahm al-Jazāma',ruler:'Mars',dayFormula:'Asc + Moon − Ascendant ruler',nightFormula:'Asc + Ascendant ruler − Moon',needs:['asc','moon','ascRuler'],explanation:'Mapped here to al-Bīrūnī’s “Boldness, violence and murder” lot. The language is historical and does not predict conduct.',use:'Study risk, martial initiative, confrontation, and the need for restraint.',calc:'boldness'},
+  {id:'treasure',arabic:'سهم الخبايا',name:'Part of Treasure / Hidden Things',translit:'Sahm al-Khabāyā',ruler:'Venus',dayFormula:'Asc + Venus − Mercury',nightFormula:'Asc + Venus − Mercury',needs:['asc','mercury','venus'],explanation:'Mapped to the second-house Treasure Trove lot; al-Bīrūnī’s table does not reverse this formula by sect.',use:'Explore concealed resources, recoverable property, reserves, and questions of discovery.',calc:'treasure'},
+  {id:'necessity',arabic:'سهم الضرورة',name:'Part of Necessity & Constraint',translit:'Sahm al-Ḍarūra',ruler:'Saturn',dayFormula:'Asc + Mars − Saturn',nightFormula:'Asc + Mars − Saturn',needs:['asc','mars','saturn'],explanation:'Mapped to the non-house “Necessity and wish” lot, distinct from the Hermetic Mercury lot sometimes also translated Necessity.',use:'Examine compulsion, unavoidable effort, limits, and the conditions that must be met.',calc:'necessity'}
+];
+
+const DECANS = [
+  {sign:'Aries',number:1,range:'0°–10°',planet:'Mars',image:'Alert dark figure with a resting axe; initiative and contest.'},{sign:'Aries',number:2,range:'10°–20°',planet:'Sun',image:'Robed figure with raised hands; rank, force, and distinction.'},{sign:'Aries',number:3,range:'20°–30°',planet:'Venus',image:'Restless figure with a bracelet and staff; desire and resolution.'},
+  {sign:'Taurus',number:1,range:'0°–10°',planet:'Mercury',image:'Ploughing or cultivating figure; preparation and gain.'},{sign:'Taurus',number:2,range:'10°–20°',planet:'Moon',image:'Field-tending figure with an open hand; growth and stewardship.'},{sign:'Taurus',number:3,range:'20°–30°',planet:'Saturn',image:'Solitary figure with a serpent or tool; endurance and guarded wealth.'},
+  {sign:'Gemini',number:1,range:'0°–10°',planet:'Jupiter',image:'Scribe or teacher with a rod; speech and instruction.'},{sign:'Gemini',number:2,range:'10°–20°',planet:'Mars',image:'Armored or helmeted figure; contest and active argument.'},{sign:'Gemini',number:3,range:'20°–30°',planet:'Sun',image:'Figure seeking with bow or instrument; inquiry and attainment.'},
+  {sign:'Cancer',number:1,range:'0°–10°',planet:'Venus',image:'Well-dressed figure amid plants; pleasure and fecundity.'},{sign:'Cancer',number:2,range:'10°–20°',planet:'Mercury',image:'Figure pouring or arranging vessels; movement and abundance.'},{sign:'Cancer',number:3,range:'20°–30°',planet:'Moon',image:'Traveler or hunter near water; pursuit and change.'},
+  {sign:'Leo',number:1,range:'0°–10°',planet:'Saturn',image:'Strong figure in rough clothing; command and severity.'},{sign:'Leo',number:2,range:'10°–20°',planet:'Jupiter',image:'Crowned figure with uplifted hands; honor and generosity.'},{sign:'Leo',number:3,range:'20°–30°',planet:'Mars',image:'Mature ruler with staff and lion; authority and resolve.'},
+  {sign:'Virgo',number:1,range:'0°–10°',planet:'Sun',image:'Maiden with grain or fruit; harvest and ordered skill.'},{sign:'Virgo',number:2,range:'10°–20°',planet:'Venus',image:'Seated figure with writing or food; discernment and provision.'},{sign:'Virgo',number:3,range:'20°–30°',planet:'Mercury',image:'Elder holding tablets; calculation and practical craft.'},
+  {sign:'Libra',number:1,range:'0°–10°',planet:'Moon',image:'Two equal seats and a balance; agreement and judgment.'},{sign:'Libra',number:2,range:'10°–20°',planet:'Saturn',image:'Sober figure weighing goods; restraint and transaction.'},{sign:'Libra',number:3,range:'20°–30°',planet:'Jupiter',image:'Noble figure with scales and book; law and mediation.'},
+  {sign:'Scorpio',number:1,range:'0°–10°',planet:'Mars',image:'Armed guardian near a gate; danger and protection.'},{sign:'Scorpio',number:2,range:'10°–20°',planet:'Sun',image:'Figure holding a serpent; hidden power and transformation.'},{sign:'Scorpio',number:3,range:'20°–30°',planet:'Venus',image:'Figure with joined animals or cords; attachment and intensity.'},
+  {sign:'Sagittarius',number:1,range:'0°–10°',planet:'Mercury',image:'Archer or traveler; direction and far-reaching thought.'},{sign:'Sagittarius',number:2,range:'10°–20°',planet:'Moon',image:'Judge beneath a canopy; counsel and increase.'},{sign:'Sagittarius',number:3,range:'20°–30°',planet:'Saturn',image:'Cloaked figure with staff; distance and disciplined purpose.'},
+  {sign:'Capricorn',number:1,range:'0°–10°',planet:'Jupiter',image:'Working figure at a threshold; ascent and practical ambition.'},{sign:'Capricorn',number:2,range:'10°–20°',planet:'Mars',image:'Builder setting stone in a wall; labor and fortification.'},{sign:'Capricorn',number:3,range:'20°–30°',planet:'Sun',image:'Keeper with keys or lamp; governance and completion.'},
+  {sign:'Aquarius',number:1,range:'0°–10°',planet:'Venus',image:'Figure pouring water from vessels; distribution and fellowship.'},{sign:'Aquarius',number:2,range:'10°–20°',planet:'Mercury',image:'Scholar with instruments; invention and analysis.'},{sign:'Aquarius',number:3,range:'20°–30°',planet:'Moon',image:'Watchful figure near flowing water; change and collective duty.'},
+  {sign:'Pisces',number:1,range:'0°–10°',planet:'Saturn',image:'Traveler carrying burdens; passage and endurance.'},{sign:'Pisces',number:2,range:'10°–20°',planet:'Jupiter',image:'Priestly or teaching figure; faith and compassionate aid.'},{sign:'Pisces',number:3,range:'20°–30°',planet:'Mars',image:'Figure near joined fish or cords; endings and decisive release.'}
+];
+
+const SIGNS = ['Aries','Taurus','Gemini','Cancer','Leo','Virgo','Libra','Scorpio','Sagittarius','Capricorn','Aquarius','Pisces'];
+const SIGN_GLYPHS = ['♈','♉','♊','♋','♌','♍','♎','♏','♐','♑','♒','♓'];
+const INPUTS = [
+  {id:'asc',label:'Ascendant',core:true},{id:'sun',label:'Sun',core:true},{id:'moon',label:'Moon',core:true},
+  {id:'mercury',label:'Mercury'},{id:'venus',label:'Venus'},{id:'mars',label:'Mars'},{id:'saturn',label:'Saturn'},{id:'ascRuler',label:'Ascendant ruler'}
+];
+const STORAGE_KEY = 'alRuhaniyyaLedger.v1';
+let activeKing = 0;
+let sect = 'day';
+let toastTimer;
+
+const $ = (s,root=document) => root.querySelector(s);
+const $$ = (s,root=document) => Array.from(root.querySelectorAll(s));
+const escapeHTML = value => String(value ?? '').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+
+function switchTab(name){
+  $$('.tab').forEach(btn=>{const on=btn.dataset.tab===name;btn.classList.toggle('active',on);btn.setAttribute('aria-selected',String(on));});
+  $$('.panel').forEach(panel=>{const on=panel.id===`panel-${name}`;panel.classList.toggle('active',on);panel.hidden=!on;});
+  $('#mainView').scrollTo({top:0,behavior:'smooth'});
+}
+
+function renderKingPicker(){
+  $('#kingPicker').innerHTML=DAY_KINGS.map((k,i)=>`<button type="button" class="chip ${i===activeKing?'active':''}" data-king="${i}" aria-pressed="${i===activeKing}">${k.glyph} ${k.day}</button>`).join('');
+}
+function renderKing(){
+  const k=DAY_KINGS[activeKing];
+  $('#kingProfile').innerHTML=`
+    <div class="king-hero"><div class="planet-orb" style="--orb:${k.orb}" aria-hidden="true">${k.glyph}</div><div><p class="arabic" lang="ar">${k.arabic}</p><p class="title-line">${k.name} · ${k.planet}</p><p class="translation">${k.translation}</p></div></div>
+    <div class="facts"><div class="fact"><span>Metal</span><strong>${k.metal}</strong></div><div class="fact"><span>Stone</span><strong>${k.stone}</strong></div><div class="fact"><span>Color</span><strong>${k.color}</strong></div><div class="fact"><span>Station</span><strong>${k.direction}</strong></div></div>
+    <h3>Traditional visual form</h3><p class="body-copy">${k.form}</p>
+    <h3>Suffumigation correspondence</h3><p class="body-copy">${k.incense}</p>
+    <h3>Invocatory address / carrier key</h3><p class="body-copy">“${k.address}”</p><p class="formula">${k.addressType}</p>
+    <div class="subcard"><span class="tag">${k.sourceClass}</span></div>`;
+}
+
+function degreeInputTemplate(item){
+  const signOptions=SIGNS.map((s,i)=>`<option value="${i}">${SIGN_GLYPHS[i]} ${s}</option>`).join('');
+  return `<div class="field degree-field" data-id="${item.id}"><label for="${item.id}Abs">${item.label}</label><input id="${item.id}Abs" class="absolute-degree" type="number" inputmode="decimal" min="0" max="359.999" step="0.001" placeholder="0–359.999°" aria-describedby="${item.id}Hint"><div class="degree-row" style="margin-top:7px"><select id="${item.id}Sign" class="sign-select" aria-label="${item.label} sign"><option value="">Sign…</option>${signOptions}</select><input id="${item.id}Deg" class="sign-degree" type="number" inputmode="decimal" min="0" max="29.999" step="0.001" placeholder="0–29.999°" aria-label="${item.label} degree within sign"></div><small id="${item.id}Hint">Use either absolute longitude or sign + degree.</small></div>`;
+}
+function buildLotInputs(){
+  $('#coreInputs').innerHTML=INPUTS.filter(x=>x.core).map(degreeInputTemplate).join('');
+  $('#advancedInputs').innerHTML=INPUTS.filter(x=>!x.core).map(degreeInputTemplate).join('');
+  $$('.absolute-degree').forEach(input=>input.addEventListener('input',()=>{if(input.value!==''){const root=input.closest('.degree-field');$('.sign-select',root).value='';$('.sign-degree',root).value='';}}));
+  $$('.sign-select,.sign-degree').forEach(input=>input.addEventListener('input',()=>{const root=input.closest('.degree-field');if($('.sign-select',root).value!==''||$('.sign-degree',root).value!=='')$('.absolute-degree',root).value='';}));
+}
+function readLongitude(id){
+  const root=$(`.degree-field[data-id="${id}"]`);
+  const abs=$('.absolute-degree',root).value.trim();
+  if(abs!==''){const n=Number(abs);if(Number.isFinite(n)&&n>=0&&n<360)return n;throw new Error(`${INPUTS.find(x=>x.id===id).label} must be from 0 up to, but not including, 360°.`);}
+  const sign=$('.sign-select',root).value,deg=$('.sign-degree',root).value.trim();
+  if(sign!==''&&deg!==''){const d=Number(deg);if(Number.isFinite(d)&&d>=0&&d<30)return Number(sign)*30+d;throw new Error(`${INPUTS.find(x=>x.id===id).label} degree must be from 0 up to, but not including, 30°.`);}
+  throw new Error(`Enter ${INPUTS.find(x=>x.id===id).label}.`);
+}
+const mod360=n=>((n%360)+360)%360;
+function calculatePart(type,v){
+  const reverse=sect==='night';
+  switch(type){
+    case 'fortune': return mod360(v.asc+(reverse?v.sun-v.moon:v.moon-v.sun));
+    case 'spirit': return mod360(v.asc+(reverse?v.moon-v.sun:v.sun-v.moon));
+    case 'boldness': return mod360(v.asc+(reverse?v.ascRuler-v.moon:v.moon-v.ascRuler));
+    case 'treasure': return mod360(v.asc+v.venus-v.mercury);
+    case 'necessity': return mod360(v.asc+v.mars-v.saturn);
+    default: throw new Error('Unknown lot formula.');
+  }
+}
+function formatZodiac(value){
+  const normalized=mod360(value),index=Math.floor(normalized/30),degree=normalized-index*30;
+  const rounded=Math.round(degree*100)/100;
+  return `${SIGN_GLYPHS[index]} ${rounded.toFixed(2)}° ${SIGNS[index]}`;
+}
+function calculateLots(){
+  $('#lotError').hidden=true;
+  try{
+    const values={}; INPUTS.forEach(item=>values[item.id]=readLongitude(item.id));
+    $('#lotResults').innerHTML=ARABIC_PARTS.map(p=>{const value=calculatePart(p.calc,values),formula=sect==='day'?p.dayFormula:p.nightFormula;return `<article class="result"><div class="result-top"><div><h3>${p.name}</h3><div class="formula"><span lang="ar" dir="rtl">${p.arabic}</span> · ${p.translit}</div></div><strong class="degree">${formatZodiac(value)}</strong></div><div class="recipe-meta"><span class="tag">Ruler: ${p.ruler}</span><span class="tag">${sect==='day'?'Day':'Night'} chart</span></div><p class="body-copy">${p.explanation}</p><p class="formula">Formula: ${formula} · Absolute longitude: ${value.toFixed(3)}°</p><p class="body-copy"><strong>Operative use:</strong> ${p.use}</p></article>`;}).join('');
+    $('#lotResults').scrollIntoView({behavior:'smooth',block:'start'});
+  }catch(err){$('#lotError').textContent=err.message;$('#lotError').hidden=false;$('#lotResults').innerHTML='';}
+}
+function resetLots(){
+  $$('.degree-field input').forEach(x=>x.value='');$$('.degree-field select').forEach(x=>x.value='');$('#lotResults').innerHTML='';$('#lotError').hidden=true;sect='day';$('#sectDay').classList.add('active');$('#sectNight').classList.remove('active');
+}
+
+function renderRecipes(){
+  const intention=$('#intentionFilter').value,q=$('#recipeSearch').value.trim().toLowerCase();
+  const items=PICATRIX_RECIPES.filter(r=>(intention==='all'||r.intention===intention)&&(!q||[r.title,r.planet,r.decan,r.material,r.image,r.intention].join(' ').toLowerCase().includes(q)));
+  $('#recipeList').innerHTML=items.length?items.map(r=>{
+    const decan=DECANS.find(d=>`${d.sign} ${['I','II','III'][d.number-1]}`===r.decan);
+    return `<article class="card recipe"><h3>${r.title}</h3><div class="recipe-meta"><span class="tag">${r.intention}</span><span class="tag">${r.planet}</span><span class="tag">${r.decan}</span></div><h3>Election</h3><p class="body-copy">${r.condition}</p><h3>Material</h3><p class="body-copy">${r.material}</p><h3>Image</h3><p class="body-copy">${r.image}</p><h3>Fumigation</h3><p class="body-copy">${r.incense}</p><h3>Consecration sequence</h3><ol class="steps">${r.steps.map(s=>`<li>${s}</li>`).join('')}</ol>${decan?`<div class="decan-strip"><span class="decan-pill">${decan.sign} ${decan.number} · ${decan.range}</span><span class="decan-pill">Decan ruler: ${decan.planet}</span></div>`:''}<p class="note">${r.note}</p></article>`;
+  }).join(''):'<div class="card empty">No recipes match this filter.</div>';
+}
+
+function loadLogs(){
+  try{const parsed=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');return Array.isArray(parsed)?parsed:[];}catch{return [];}
+}
+function saveLogs(logs){localStorage.setItem(STORAGE_KEY,JSON.stringify(logs));}
+function renderLogs(){
+  const logs=loadLogs();$('#logCount').textContent=`${logs.length} ${logs.length===1?'entry':'entries'}`;
+  $('#logHistory').innerHTML=logs.length?logs.map(log=>`<article class="card log-entry"><button class="delete-log" type="button" data-delete="${escapeHTML(log.id)}" aria-label="Delete ${escapeHTML(log.name)}">×</button><h3>${escapeHTML(log.name)}</h3><div class="log-meta">${escapeHTML(log.created)} · ${escapeHTML(log.king)}</div><div class="recipe-meta"><span class="status ${log.status==='Complete'?'complete':''}">${escapeHTML(log.status)}</span>${log.target?`<span class="tag">${escapeHTML(log.target)}</span>`:''}</div>${log.notes?`<p class="body-copy" style="white-space:pre-wrap">${escapeHTML(log.notes)}</p>`:''}</article>`).join(''):'<div class="card empty">No saved entries yet.</div>';
+}
+function submitLedger(event){
+  event.preventDefault();const name=$('#operationName').value.trim();if(!name)return;
+  const logs=loadLogs();logs.unshift({id:`${Date.now()}-${Math.random().toString(16).slice(2)}`,created:new Date().toLocaleString(),name,king:$('#ledgerKing').value,target:$('#ledgerTarget').value.trim(),status:$('#ledgerStatus').value,notes:$('#electionNotes').value.trim()});
+  saveLogs(logs);event.target.reset();renderLogs();showToast('Entry saved offline.');
+}
+function deleteLog(id){const logs=loadLogs();const target=logs.find(x=>x.id===id);if(target&&confirm(`Delete “${target.name}”?`)){saveLogs(logs.filter(x=>x.id!==id));renderLogs();showToast('Entry deleted.');}}
+function clearLogs(){const logs=loadLogs();if(!logs.length){showToast('There are no logs to clear.');return;}if(confirm(`Permanently delete all ${logs.length} entries from this device?`)){localStorage.removeItem(STORAGE_KEY);renderLogs();showToast('All logs cleared.');}}
+function exportLogs(){
+  const logs=loadLogs();if(!logs.length){showToast('Save an entry before exporting.');return;}
+  const lines=['AL-RŪḤĀNIYYA, OPERATIVE LEDGER','Exported: '+new Date().toLocaleString(),'='.repeat(44),''];
+  logs.forEach((x,i)=>lines.push(`${i+1}. ${x.name}`,`Date: ${x.created}`,`King / Planet: ${x.king}`,`Target: ${x.target||'—'}`,`Status: ${x.status}`,`Election Notes:\n${x.notes||'—'}`,'','-'.repeat(44),''));
+  const blob=new Blob([lines.join('\n')],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`al-ruhaniyya-ledger-${new Date().toISOString().slice(0,10)}.txt`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);showToast('Ledger exported.');
+}
+function showToast(message){const t=$('#toast');t.textContent=message;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('show'),2200);}
+
+function init(){
+  renderKingPicker();renderKing();buildLotInputs();renderRecipes();
+  $('#ledgerKing').innerHTML='<option>Unspecified</option>'+DAY_KINGS.map(k=>`<option>${k.day} · ${k.name} · ${k.planet}</option>`).join('');renderLogs();
+  $$('.tab').forEach(btn=>btn.addEventListener('click',()=>switchTab(btn.dataset.tab)));
+  $('#kingPicker').addEventListener('click',e=>{const btn=e.target.closest('[data-king]');if(!btn)return;activeKing=Number(btn.dataset.king);renderKingPicker();renderKing();});
+  $$('.segmented button').forEach(btn=>btn.addEventListener('click',()=>{sect=btn.dataset.sect;$$('.segmented button').forEach(x=>x.classList.toggle('active',x===btn));}));
+  $('#calculateLots').addEventListener('click',calculateLots);$('#resetLots').addEventListener('click',resetLots);
+  $('#intentionFilter').addEventListener('change',renderRecipes);$('#recipeSearch').addEventListener('input',renderRecipes);
+  $('#ledgerForm').addEventListener('submit',submitLedger);$('#exportLogs').addEventListener('click',exportLogs);$('#clearLogs').addEventListener('click',clearLogs);
+  $('#logHistory').addEventListener('click',e=>{const btn=e.target.closest('[data-delete]');if(btn)deleteLog(btn.dataset.delete);});
+  document.addEventListener('keydown',e=>{if(e.altKey&&['1','2','3','4'].includes(e.key))switchTab(['kings','lots','recipes','ledger'][Number(e.key)-1]);});
+}
+
+document.addEventListener('DOMContentLoaded',init);
+</script>
+</body>
+</html>
