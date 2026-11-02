@@ -1,1 +1,26 @@
-{"background_color": "#0c0d10", "description": "Al-Ruhaniyya companion app: the seven Day Kings, Lots, and Picatrix talisman recipes.", "display": "standalone", "icons": [], "id": "./index.html", "name": "Al-Ruhaniyya Companion", "orientation": "any", "scope": "./", "short_name": "Al-Ruhaniyya", "start_url": "./index.html", "theme_color": "#0c0d10"}
+{
+  "background_color": "#0c0d10",
+  "description": "Al-Ruhaniyya companion app: the seven Day Kings, Lots, and Picatrix talisman recipes.",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "id": "./index.html",
+  "name": "Al-Ruhaniyya Companion",
+  "orientation": "any",
+  "scope": "./",
+  "short_name": "Al-Ruhaniyya",
+  "start_url": "./index.html",
+  "theme_color": "#0c0d10"
+}
